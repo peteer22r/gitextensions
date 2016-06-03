@@ -554,11 +554,11 @@ namespace GitUI.CommandsDialogs
             // 
             // toolStripBranches
             // 
-            this.toolStripBranches.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
-            this.toolStripBranches.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
-            this.toolStripBranches.DropDownWidth = 300;
+            //this.toolStripBranches.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+            //this.toolStripBranches.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
+            this.toolStripBranches.DropDownWidth = 900;
             this.toolStripBranches.Name = "toolStripBranches";
-            this.toolStripBranches.Size = new System.Drawing.Size(186, 25);
+            this.toolStripBranches.Size = new System.Drawing.Size(300, 25);
             // 
             // toolStripDropDownButton2
             // 

@@ -55,7 +55,7 @@ namespace GitUI.RevisionGridClasses
         private int _nodeDimension = 8;
         private int _laneWidth = 13;
         private int _laneLineWidth = 2;
-        private const int MaxLanes = 40;
+        private const int MaxLanes = 40000;
         private Brush _selectionBrush;
 
         private Pen _whiteBorderPen;
@@ -713,6 +713,7 @@ namespace GitUI.RevisionGridClasses
         private void UpdateColumnWidth()
         {
             // Auto scale width on scroll
+            //*
             if (GraphColumn.Visible)
             {
                 int laneCount = 2;
@@ -734,6 +735,7 @@ namespace GitUI.RevisionGridClasses
                 if (GraphColumn.Width != _laneWidth*laneCount && _laneWidth*laneCount > GraphColumn.MinimumWidth)
                     GraphColumn.Width = _laneWidth*laneCount;
             }
+             //*/
         }
 
         //Color of non-relative branches.
