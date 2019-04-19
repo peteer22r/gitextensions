@@ -595,10 +595,10 @@ namespace GitUI.CommandsDialogs
             // 
             this.toolStripBranchFilterComboBox.AutoSize = false;
             this.toolStripBranchFilterComboBox.BackColor = System.Drawing.SystemColors.Control;
-            this.toolStripBranchFilterComboBox.DropDownWidth = 300;
+            this.toolStripBranchFilterComboBox.DropDownWidth = 900;
             this.toolStripBranchFilterComboBox.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.toolStripBranchFilterComboBox.Name = "toolStripBranchFilterComboBox";
-            this.toolStripBranchFilterComboBox.Size = new System.Drawing.Size(100, 23);
+            this.toolStripBranchFilterComboBox.Size = new System.Drawing.Size(300, 23);
             this.toolStripBranchFilterComboBox.Click += new System.EventHandler(this.toolStripBranchFilterComboBox_Click);
             // 
             // toolStripBranchFilterDropDownButton

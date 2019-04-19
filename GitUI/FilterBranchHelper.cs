@@ -62,7 +62,8 @@ namespace GitUI
             });
 
             _NO_TRANSLATE_toolStripBranches.DropDown += toolStripBranches_DropDown;
-            _NO_TRANSLATE_toolStripBranches.TextUpdate += toolStripBranches_TextUpdate;
+
+            // _NO_TRANSLATE_toolStripBranches.TextUpdate += toolStripBranches_TextUpdate;
             _NO_TRANSLATE_toolStripBranches.Leave += toolStripBranches_Leave;
             _NO_TRANSLATE_toolStripBranches.KeyUp += toolStripBranches_KeyUp;
         }

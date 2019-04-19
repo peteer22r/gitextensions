@@ -451,15 +451,16 @@ namespace GitUI.CommitInfo
 
                 if (_tags != null && string.IsNullOrEmpty(_tagInfo))
                 {
-                    _tags.Sort(new ItemTpComparer(_sortedRefs, "refs/tags/"));
-                    if (_tags.Count > MaximumDisplayedRefs)
-                    {
-                        _tags[MaximumDisplayedRefs - 2] = "…";
-                        _tags[MaximumDisplayedRefs - 1] = _tags[_tags.Count - 1];
-                        _tags.RemoveRange(MaximumDisplayedRefs, _tags.Count - MaximumDisplayedRefs);
-                    }
+               var prel_tags = _tags.GroupBy(x => x.StartsWith("PREL/"))
+                  .Select(x => x.ToList());
+               _tags = new List<string>();
+               foreach (var sublist in prel_tags.Reverse())
+               {
+                  sublist.Sort(new ItemTpComparer(_sortedRefs, "refs/tags/"));
+                  _tags.AddAll(sublist);
+               }
 
-                    _tagInfo = GetTagsWhichContainsThisCommit(_tags, ShowBranchesAsLinks);
+               _tagInfo = GetTagsWhichContainsThisCommit(_tags, ShowBranchesAsLinks);
                 }
 
                 if (_branches != null && string.IsNullOrEmpty(_branchInfo))
